@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+body {
+  background-color: #6e8b8f9e;
+}
+
+/* For Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For all browsers */
+input[type="number"] {
+  appearance: textfield;
+}
