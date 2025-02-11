@@ -1,50 +1,77 @@
-# React + TypeScript + Vite
+# Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Project Overview
+This project is an **Expense Tracker** application built with **React** and **TypeScript**. It allows users to:
+- Add expense entries with **name**, **category**, and **price**.
+- Validate input fields using **Zod**.
+- Display all expenses in a table with a **debounced search** feature to filter by category.
+- Delete individual expense entries.
+- Persist data in **local storage**.
+- Show validation and success/error messages using **React Hot Toast**.
 
-Currently, two official plugins are available:
+The application is designed to be simple, responsive, and user-friendly, making it easy to track and manage expenses.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+The following technologies and tools were used to build this project:
+- **Frontend**:
+  - React (with TypeScript)
+  - React Context API (for state management)
+  - TailwindCSS (for styling)
+- **Validation**:
+  - Zod (for input validation)
+- **Utilities**:
+  - Lodash (for debounce functionality)
+- **Notifications**:
+  - React Hot Toast (for toast notifications)
+- **Development Tools**:
+  - Vite or Create React App (for project setup)
+  - ESLint and Prettier (for code linting and formatting)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 🚀 Installation Instructions
+Follow these steps to set up and run the project locally:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/expense-tracker.git
+2. **Navigate to the Project Folder**:
+   cd expense-tracker
+3. **Install Dependencies**:
+   npm install
+4.**Run the App**:
+   npm star
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🌟 Usage Guide
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Adding an Expense
+1. **Fill out the form fields:**
+   - **Name:** Enter the name of the expense (e.g., "Groceries").
+   - **Category:** Choose or enter a category (e.g., Food, Travel, Entertainment).
+   - **Price:** Enter the amount (must be a  number, e.g., 50).
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. **Click the Add button** to save the expense. The data will be validated using **Zod**:
+   - If the input is **invalid**, a **React Hot Toast** error message will be displayed.
+   - If the input is **valid**, the expense will be saved to **local storage** and displayed in the table.
+
+### Viewing Expenses
+All added expenses are displayed in a table with the following columns:
+
+- **Name:** The name of the expense.
+- **Category:** The category of the expense.
+- **Price:** The amount of the expense.
+- **Actions:** A delete button (🗑️) to remove the expense.
+
+### Searching Expenses
+Use the **search input** at the top of the table to filter expenses by category.
+
+- The search is **debounced**, meaning it will only trigger after you stop typing for **300ms**, ensuring optimal performance.
+- **Example:** Type "Food" in the search bar to display only expenses in the "Food" category.
+
+### Deleting an Expense
+- Click the **Delete button** (🗑️) next to an expense to remove it from the list and local storage.
+- A **React Hot Toast** notification will confirm the deletion.
+
+ 
