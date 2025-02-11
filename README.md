@@ -44,9 +44,7 @@ Follow these steps to set up and run the project locally:
     ```bash
    npm install
 4.**Run the App**:
-  ```bash
-  npm star
-
+  npm start
 
 ## 🌟 Usage Guide
 
