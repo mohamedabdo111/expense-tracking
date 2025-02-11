@@ -38,11 +38,15 @@ Follow these steps to set up and run the project locally:
    ```bash
    git clone https://github.com/yourusername/expense-tracker.git
 2. **Navigate to the Project Folder**:
+    ```bash
    cd expense-tracker
-3. **Install Dependencies**:
+4. **Install Dependencies**:
+    ```bash
    npm install
 4.**Run the App**:
-   npm star
+  ```bash
+  npm star
+
 
 ## 🌟 Usage Guide
 
